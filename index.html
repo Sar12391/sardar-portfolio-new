@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sardar Hussain | Technology Professional, Data Analyst & Information Secretary</title>
+  <meta name="description" content="Official portfolio of Sardar Hussain — Multiskilled Technology Professional, Data Analyst (Power BI), AI Automation Specialist, Information Secretary at IBA Jamshoro, and Corporate Taxation Consultant.">
+  <meta name="keywords" content="Sardar Hussain, Data Analyst, Power BI, Web Developer, Information Secretary, IBA Jamshoro, Corporate Taxation, FBR, Pakistan">
+  <meta name="author" content="Sardar Hussain">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyberDark: '#080c14',
+            cyberCard: '#121a2b',
+            neonCyan: '#06b6d4',
+            neonCyanLight: '#67e8f9',
+            neonPurple: '#8b5cf6',
+            neonPurpleLight: '#c084fc',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="relative bg-[#080c14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Background Particle Interactive Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION BAR
+       =================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo / Brand -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-purple-600 p-[2px] shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-400/40 transition-all duration-300">
+            <div class="w-full h-full bg-[#090e17] rounded-[10px] flex items-center justify-center font-mono font-bold text-lg text-cyan-400 group-hover:text-white transition-colors">
+              SH
+            </div>
+          </div>
+          <div>
+            <span class="text-lg font-bold tracking-tight text-white block group-hover:text-cyan-400 transition-colors">Sardar Hussain</span>
+            <span class="text-xs font-mono text-cyan-400/80 block -mt-1 tracking-wider uppercase">Tech & Data Professional</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+          <a href="#competencies" class="nav-link hover:text-cyan-400 transition-colors">Competencies</a>
+          <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors">Experience</a>
+          <a href="#certifications" class="nav-link hover:text-cyan-400 transition-colors">Certifications</a>
+          <a href="#education" class="nav-link hover:text-cyan-400 transition-colors">Education</a>
+          <a href="#projects" class="nav-link hover:text-cyan-400 transition-colors">Projects</a>
+          <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="hidden lg:flex items-center gap-3">
+          <button onclick="printResume()" class="btn-secondary text-xs !py-2.5 !px-4" title="Print or Save CV as PDF">
+            <i class="fas fa-file-pdf text-cyan-400"></i> Print CV
+          </button>
+          <a href="#contact" class="btn-primary text-xs !py-2.5 !px-5">
+            <i class="fas fa-paper-plane"></i> Let's Talk
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="md:hidden flex items-center gap-2">
+          <button id="mobile-menu-toggle" class="p-2.5 rounded-lg bg-slate-800/80 text-slate-200 hover:text-cyan-400 focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-down Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0d1322]/95 border-b border-slate-800 px-6 py-6 space-y-4 backdrop-blur-xl">
+      <a href="#about" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">About Me</a>
+      <a href="#competencies" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Core Competencies</a>
+      <a href="#experience" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Experience Timeline</a>
+      <a href="#certifications" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Certifications & Diplomas</a>
+      <a href="#education" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Education & Languages</a>
+      <a href="#projects" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Featured Projects</a>
+      <a href="#contact" class="block py-2 text-slate-200 hover:text-cyan-400 font-medium">Contact Form</a>
+      <div class="pt-4 flex flex-col gap-3">
+        <button onclick="printResume()" class="btn-secondary w-full text-sm py-2.5">
+          <i class="fas fa-file-pdf text-cyan-400"></i> Print / Save CV
+        </button>
+        <a href="#contact" class="btn-primary w-full text-sm py-2.5 text-center">
+          <i class="fas fa-paper-plane mr-1"></i> Contact Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       MAIN CONTENT CONTAINER
+       =================================================================== -->
+  <main class="relative z-10 pt-28">
+
+    <!-- ===================================================================
+         1. HERO SECTION
+         =================================================================== -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Main Info -->
+          <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+            
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-950/40">
+              <span class="pulse-dot"></span>
+              <span>Available for Consulting, IT Training & Data Projects</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+              <span class="text-white">Sardar Hussain</span>
+              <span class="block text-gradient text-3xl sm:text-4xl lg:text-5xl mt-2 font-bold">
+                Technology Professional, Data Analyst & Information Secretary
+              </span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl">
+              Specializing in <span class="text-cyan-400 font-semibold">Web & E-Commerce Development</span>, <span class="text-purple-400 font-semibold">Data Analytics (Power BI)</span>, <span class="text-cyan-300 font-semibold">AI Automation</span>, and <span class="text-emerald-400 font-semibold">Corporate Taxation</span>.
+            </p>
+
+            <!-- Dynamic Interactive Typing Ribbon -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800/80 shadow-inner text-xs font-mono text-slate-300">
+              <span class="text-slate-400 flex items-center gap-1.5"><i class="fas fa-terminal text-cyan-400 text-[11px]"></i> Active Specialization:</span>
+              <span id="typing-text" class="text-cyan-300 font-semibold">Web & E-Commerce Developer</span><span class="typing-cursor"></span>
+            </div>
+
+            <!-- Quick Contact Badges Grid -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+              <!-- Location -->
+              <div class="badge-pill badge-cyan text-xs py-2 px-3.5 backdrop-blur-md">
+                <i class="fas fa-location-dot text-cyan-400 mr-1.5"></i>
+                <span>Matli, Sindh, Pakistan</span>
+              </div>
+
+              <!-- Email with Quick Copy -->
+              <button data-copy-text="sardarbrohi000@gmail.com" data-copy-label="Email" class="badge-pill badge-purple text-xs py-2 px-3.5 hover:border-purple-400 transition-all cursor-pointer backdrop-blur-md group" title="Click to copy email">
+                <i class="fas fa-envelope text-purple-400 mr-1.5"></i>
+                <span>sardarbrohi000@gmail.com</span>
+                <i class="fas fa-copy text-[10px] ml-1.5 opacity-60 group-hover:opacity-100"></i>
+              </button>
+
+              <!-- Phone with Direct Call / WhatsApp -->
+              <a href="https://wa.me/923053886931" target="_blank" rel="noopener noreferrer" class="badge-pill badge-emerald text-xs py-2 px-3.5 hover:border-emerald-400 transition-all cursor-pointer backdrop-blur-md group" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp text-emerald-400 mr-1.5"></i>
+                <span>+92 305 3886931</span>
+                <i class="fas fa-arrow-up-right-from-square text-[10px] ml-1.5 opacity-60 group-hover:opacity-100"></i>
+              </a>
+            </div>
+
+            <!-- Call To Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+              <a href="#competencies" class="btn-primary">
+                <span>View Projects & Skills</span>
+                <i class="fas fa-arrow-down ml-1 text-sm"></i>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-envelope"></i>
+                <span>Contact Me</span>
+              </a>
+              <button onclick="printResume()" class="btn-secondary no-print" title="Generate Resume View">
+                <i class="fas fa-download"></i>
+                <span>Resume / CV</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Tech Badge / Terminal Card -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Glow backdrops -->
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 opacity-30 blur-xl"></div>
+              
+              <div class="relative glass-panel p-6 sm:p-7 border border-slate-700/60 shadow-2xl space-y-5">
+                
+                <!-- Terminal Header Bar -->
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                    <i class="fas fa-terminal text-cyan-400"></i> bash &bull; profile.sh
+                  </span>
+                </div>
+
+                <!-- Profile Card Content -->
+                <div class="flex items-center gap-4">
+                  <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 via-indigo-600 to-purple-700 p-[2px] shadow-lg shadow-purple-500/30 flex-shrink-0">
+                    <div class="w-full h-full bg-[#0a0f1d] rounded-[14px] flex items-center justify-center font-bold text-2xl text-gradient-cyan">
+                      SH
+                    </div>
+                  </div>
+                  <div>
+                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                      Sardar Hussain
+                      <i class="fas fa-certificate text-cyan-400 text-sm" title="Verified Credentials"></i>
+                    </h2>
+                    <p class="text-xs text-slate-400">BBA (IBA Jamshoro) &bull; B.Com (AIOU)</p>
+                    <p class="text-xs font-mono text-purple-400 mt-0.5">Information Secretary @ IBAJ-SS</p>
+                  </div>
+                </div>
+
+                <!-- Code / Metrics Snippet -->
+                <div class="code-card p-4 space-y-2 text-xs">
+                  <div class="text-slate-400"><span class="text-purple-400">const</span> <span class="text-cyan-300">professional</span> = {</div>
+                  <div class="pl-4 text-slate-300">role: <span class="text-emerald-400">"Tech, Data & Institutional PR"</span>,</div>
+                  <div class="pl-4 text-slate-300">power_bi_score: <span class="text-amber-400">"96% (Level 7 UniAthena)"</span>,</div>
+                  <div class="pl-4 text-slate-300">chatgpt_score: <span class="text-amber-400">"90% (Level 5 UniAthena)"</span>,</div>
+                  <div class="pl-4 text-slate-300">tax_compliance: <span class="text-cyan-300">"FBR IRIS Portal E-Filing"</span>,</div>
+                  <div class="pl-4 text-slate-300">languages: [<span class="text-emerald-400">"English"</span>, <span class="text-emerald-400">"Urdu"</span>, <span class="text-emerald-400">"Sindhi"</span>, <span class="text-emerald-400">"Balochi"</span>]</div>
+                  <div class="text-slate-400">};</div>
+                </div>
+
+                <!-- Key Skill Tags Pill Cloud -->
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-800/40 rounded-md">Power BI Level 7</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-purple-950/60 text-purple-300 border border-purple-800/40 rounded-md">Google AI Pro</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-blue-950/60 text-blue-300 border border-blue-800/40 rounded-md">Web & Shopify</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-800/40 rounded-md">FBR Corporate Tax</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-indigo-950/60 text-indigo-300 border border-indigo-800/40 rounded-md">Institutional PR</span>
+                </div>
+
+                <!-- Bottom Status -->
+                <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                  <span class="flex items-center gap-1.5">
+                    <i class="fas fa-shield-halved text-cyan-400"></i> Reference Verified
+                  </span>
+                  <span class="text-slate-500 font-mono">Location: Matli, PK</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         2. EXECUTIVE SUMMARY / ABOUT ME
+         =================================================================== -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0f1c]/60 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Title Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-xs font-mono text-purple-300">
+            <i class="fas fa-user-astronaut"></i> Executive Summary
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Bridging <span class="text-gradient-cyan">Technology</span>, <span class="text-gradient-purple">Institutional Leadership</span> & <span class="text-emerald-400">Financial Insight</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            A versatile professional combining academic rigor, instructional acumen, and specialized technical mastery.
+          </p>
+        </div>
+
+        <!-- Dual Expertise Presentation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          
+          <!-- Card 1: Technology Instruction & Public Administration -->
+          <div class="glass-panel p-8 space-y-5 border-l-4 border-l-cyan-500">
+            <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl shadow-lg shadow-cyan-900/30">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Institutional Communication & IT Instruction</h3>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Serving as the <strong class="text-cyan-400">Information Secretary for the IBA Jamshoro Students' Society (IBAJ-SS)</strong> at the University of Sindh, directing public relations, institutional statements, media dissemination, and high-impact digital outreach across student and administrative bodies.
+            </p>
+            <p class="text-slate-400 leading-relaxed text-sm">
+              Concurrently an active <strong class="text-slate-200">Computer Teacher & IT Instructor at M-Logicx Education</strong> since 2021, having trained and mentored dozens of aspiring technologists in web development, graphic design, and computer operations.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-2">
+              <span class="badge-pill badge-cyan text-xs">Public Relations</span>
+              <span class="badge-pill badge-cyan text-xs">Media Strategy</span>
+              <span class="badge-pill badge-cyan text-xs">Student Mentorship</span>
+              <span class="badge-pill badge-cyan text-xs">Curriculum Design</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Specialized Technical Qualifications -->
+          <div class="glass-panel p-8 space-y-5 border-l-4 border-l-purple-500">
+            <div class="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-500/40 flex items-center justify-center text-purple-400 text-xl shadow-lg shadow-purple-900/30">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Data Analytics, AI & Corporate Taxation</h3>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Equipped with elite technical credentials including <strong class="text-purple-400">Microsoft Power BI Level 7 (96% Distinction)</strong> and <strong class="text-purple-300">Master ChatGPT Level 5 (90% Distinction)</strong>, transforming raw corporate data into actionable KPI intelligence dashboards and intelligent automated workflows.
+            </p>
+            <p class="text-slate-400 leading-relaxed text-sm">
+              Backed by hands-on corporate taxation internship experience with <strong class="text-slate-200">Tax Inn Pvt Ltd, Karachi</strong>, proficient in FBR IRIS portal e-filing, corporate tax compliance, withholding calculations, and computerized accounting systems.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-2">
+              <span class="badge-pill badge-purple text-xs">Power BI Level 7 (96%)</span>
+              <span class="badge-pill badge-purple text-xs">ChatGPT Master (90%)</span>
+              <span class="badge-pill badge-purple text-xs">Google AI Pro</span>
+              <span class="badge-pill badge-purple text-xs">FBR E-Filing</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Key Impact Stats Animated Row -->
+        <div id="stats-row" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          
+          <div class="glass-panel p-6 text-center border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 font-mono stat-counter" data-target="4" data-suffix="+">4+</div>
+            <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">Years IT Instruction</div>
+            <div class="text-[11px] text-slate-500">At M-Logicx & Academies</div>
+          </div>
+
+          <div class="glass-panel p-6 text-center border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 font-mono stat-counter" data-target="96" data-suffix="%">96%</div>
+            <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">Power BI Score</div>
+            <div class="text-[11px] text-slate-500">Level 7 Distinction (UniAthena)</div>
+          </div>
+
+          <div class="glass-panel p-6 text-center border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-cyan-300 font-mono stat-counter" data-target="90" data-suffix="%">90%</div>
+            <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">ChatGPT Master Score</div>
+            <div class="text-[11px] text-slate-500">Level 5 Prompt Engineering</div>
+          </div>
+
+          <div class="glass-panel p-6 text-center border border-slate-800">
+            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono stat-counter" data-target="6" data-suffix="+">6+</div>
+            <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">Diplomas & Certifications</div>
+            <div class="text-[11px] text-slate-500">Google, MUET, STEVTA, UniAthena</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3. CORE COMPETENCIES (Interactive Cards with Filter Tabs)
+         =================================================================== -->
+    <section id="competencies" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-xs font-mono text-cyan-300">
+            <i class="fas fa-cubes"></i> Technical Skillset
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Core <span class="text-gradient-cyan">Competencies</span> & Toolkit
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Interactive breakdown of multidisciplinary skills spanning web development, data intelligence, AI prompt craft, financial compliance, and graphic design.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          <button class="filter-tab active" data-competency-filter="all">All Domains</button>
+          <button class="filter-tab" data-competency-filter="web">Web & E-Commerce</button>
+          <button class="filter-tab" data-competency-filter="data">Data & Power BI</button>
+          <button class="filter-tab" data-competency-filter="ai">AI & Automation</button>
+          <button class="filter-tab" data-competency-filter="tax">Taxation & Accounting</button>
+          <button class="filter-tab" data-competency-filter="design">Design & Marketing</button>
+        </div>
+
+        <!-- Competency Cards Grid -->
+        <div id="competencies-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+          <!-- 1. Web & E-Commerce -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="web">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                  <i class="fas fa-code"></i>
+                </div>
+                <span class="badge-pill badge-cyan text-[11px] font-mono">Web & E-Commerce</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Web & E-Commerce Development</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Building responsive, scalable web solutions, commercial storefronts, and brand landing pages with fast load times and seamless UX.
+              </p>
+              
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Stack:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Wix</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Shopify</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">WordPress</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">HTML5 / CSS3</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">JavaScript</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>Implementation Mastery</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-cyan-500 to-blue-500" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Data Analytics & Power BI -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="data">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <span class="badge-pill badge-purple text-[11px] font-mono">Level 7 Certified</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Data Analytics & Business Intelligence</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Transforming complex datasets into high-fidelity executive dashboards, automated reporting pipelines, and actionable business insights.
+              </p>
+
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Stack:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Power BI (Level 7)</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Power Query (ETL)</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Data Modeling</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">DAX Formulas</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">KPI Dashboards</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Excel Analytics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>Distinction Exam Score</span>
+                <span class="text-purple-400">96%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-purple-500 to-indigo-500" style="width: 96%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. AI & Automation -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="ai">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <span class="badge-pill badge-cyan text-[11px] font-mono">Google Certified</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">AI Automation & Prompt Engineering</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Deploying cutting-edge generative AI models, engineered prompts, and workflow automations to amplify institutional and business productivity.
+              </p>
+
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Stack:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Google AI Pro</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">ChatGPT (Level 5)</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Prompt Engineering</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">AI Research Tools</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Workflow Automation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>UniAthena Exam Score</span>
+                <span class="text-cyan-400">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-cyan-400 to-teal-400" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Taxation & Accounting -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="tax">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <span class="badge-pill badge-emerald text-[11px] font-mono">FBR Compliant</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Corporate Taxation & Accounting</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Corporate tax filing, withholding management, financial ledger balancing, and computerized accounting audits via Pakistan's FBR portals.
+              </p>
+
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Stack:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">Corporate Filing</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">FBR IRIS E-Filing</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">Peachtree Accounting</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">General Accounting</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">Withholding Tax</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-emerald-300 rounded font-mono">Audit Support</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>Compliance Accuracy</span>
+                <span class="text-emerald-400">95%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-emerald-500 to-teal-500" style="width: 95%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Design & Digital Marketing -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="design">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <span class="badge-pill badge-purple text-[11px] font-mono">Creative Media</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Design & Digital Marketing</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Producing institutional press graphics, social media marketing campaigns, branding identities, and user experience wireframes.
+              </p>
+
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Stack:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Adobe Photoshop</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Adobe Illustrator</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Adobe XD (UI/UX)</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Social Media Marketing</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-purple-300 rounded font-mono">Brand Identity</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>Visual Craft</span>
+                <span class="text-purple-400">88%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-pink-500" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Institutional Communication & Office Management -->
+          <div class="competency-card glass-panel p-7 flex flex-col justify-between" data-category="web design">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                  <i class="fas fa-users-gear"></i>
+                </div>
+                <span class="badge-pill badge-cyan text-[11px] font-mono">Leadership & PR</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Institutional PR & Operations</h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Directing society communications, university event management, media coverage, executive correspondence, and team leadership.
+              </p>
+
+              <div class="space-y-2 pt-2">
+                <div class="text-xs text-slate-400 font-medium">Core Capabilities:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Press Release Drafts</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Media Outreach</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Office Automation</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Event Coordination</span>
+                  <span class="px-2 py-1 text-xs bg-slate-800 text-cyan-300 rounded font-mono">Executive Reporting</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proficiency indicator -->
+            <div class="pt-6 border-t border-slate-800/80 mt-6">
+              <div class="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                <span>Execution Standard</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill bg-gradient-to-r from-cyan-500 to-indigo-500" style="width: 94%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. EXPERIENCE TIMELINE
+         =================================================================== -->
+    <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0f1c]/70 relative">
+      <div class="max-w-5xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-xs font-mono text-purple-300">
+            <i class="fas fa-briefcase"></i> Career Journey
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Professional <span class="text-gradient-purple">Experience</span> Timeline
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Track record of organizational leadership, academic instruction, corporate taxation, and technical administration.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline Track -->
+        <div class="timeline-track space-y-12 pl-12 md:pl-0">
+
+          <!-- 1. Information Secretary | IBA Jamshoro -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <!-- Timeline Node Center Indicator -->
+            <div class="timeline-node top-3"></div>
+
+            <!-- Left / Content -->
+            <div class="md:text-right space-y-2">
+              <span class="inline-block px-3 py-1 text-xs font-mono rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 font-semibold">
+                2025 — Present &bull; Current Post
+              </span>
+              <h3 class="text-2xl font-bold text-white">Information Secretary</h3>
+              <p class="text-cyan-400 font-medium text-sm">
+                Institute of Business Administration (IBA), University of Sindh
+              </p>
+              <p class="text-xs font-mono text-slate-400">IBA Jamshoro Students' Society (IBAJ-SS)</p>
+            </div>
+
+            <!-- Right / Card Details -->
+            <div class="glass-panel p-6 mt-4 md:mt-0 border-l-2 md:border-l border-slate-700/80 space-y-3">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Leading the institutional communications portfolio for the apex student body of IBA Jamshoro. Key responsibilities include:
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 list-none">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-cyan-400 text-[10px] mt-1"></i>
+                  <span>Directing official public relations, press statements, and media releases for academic symposia and society events.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-cyan-400 text-[10px] mt-1"></i>
+                  <span>Overseeing multi-platform digital media dissemination across social channels, boosting student engagement and external visibility.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-cyan-400 text-[10px] mt-1"></i>
+                  <span>Coordinating between faculty administration, invited industry leaders, and the student council.</span>
+                </li>
+              </ul>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-cyan-300 rounded font-mono">Public Relations</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-cyan-300 rounded font-mono">Digital Media Outreach</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-cyan-300 rounded font-mono">Media Dissemination</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Computer Teacher & IT Instructor | M-Logicx Education -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <!-- Timeline Node Center Indicator -->
+            <div class="timeline-node top-3"></div>
+
+            <!-- Left / Card Details (swapped on desktop for zigzag) -->
+            <div class="glass-panel p-6 mb-4 md:mb-0 order-2 md:order-1 border-l-2 md:border-r border-slate-700/80 space-y-3">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Instructional lead conducting hands-on IT courses for students and aspiring professionals:
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 list-none">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-purple-400 text-[10px] mt-1"></i>
+                  <span>Lecturing and mentoring in modern web development technologies (HTML5, CSS3, JavaScript, Bootstrap, CMS platforms).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-purple-400 text-[10px] mt-1"></i>
+                  <span>Instructing graphic design software suites (Adobe Photoshop, Illustrator) with real-world project portfolios.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-purple-400 text-[10px] mt-1"></i>
+                  <span>Delivering comprehensive office automation and computerized accounting training modules.</span>
+                </li>
+              </ul>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-purple-300 rounded font-mono">Web Development</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-purple-300 rounded font-mono">Graphic Design</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-purple-300 rounded font-mono">Office Automation</span>
+              </div>
+            </div>
+
+            <!-- Right / Content -->
+            <div class="md:text-left space-y-2 order-1 md:order-2">
+              <span class="inline-block px-3 py-1 text-xs font-mono rounded-full bg-purple-950/80 text-purple-300 border border-purple-800/60 font-semibold">
+                2021 — Present &bull; 4+ Years
+              </span>
+              <h3 class="text-2xl font-bold text-white">Computer Teacher & IT Instructor</h3>
+              <p class="text-purple-400 font-medium text-sm">
+                M-Logicx Education
+              </p>
+              <p class="text-xs font-mono text-slate-400">Technical Education & Student Mentorship</p>
+            </div>
+          </div>
+
+          <!-- 3. Taxation Intern | Tax Inn Pvt Ltd, Karachi -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <!-- Timeline Node Center Indicator -->
+            <div class="timeline-node top-3"></div>
+
+            <!-- Left / Content -->
+            <div class="md:text-right space-y-2">
+              <span class="inline-block px-3 py-1 text-xs font-mono rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 font-semibold">
+                July 2025 — August 2025
+              </span>
+              <h3 class="text-2xl font-bold text-white">Taxation Intern</h3>
+              <p class="text-emerald-400 font-medium text-sm">
+                Tax Inn Pvt Ltd, Karachi
+              </p>
+              <p class="text-xs font-mono text-slate-400">Corporate Taxation & Regulatory Compliance</p>
+            </div>
+
+            <!-- Right / Card Details -->
+            <div class="glass-panel p-6 mt-4 md:mt-0 border-l-2 md:border-l border-slate-700/80 space-y-3">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Intensive corporate taxation assignment with a premier fiscal consultancy firm in Karachi:
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 list-none">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-emerald-400 text-[10px] mt-1"></i>
+                  <span>Facilitated corporate tax compliance procedures and direct e-filing via the Federal Board of Revenue (FBR) IRIS online portal.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-emerald-400 text-[10px] mt-1"></i>
+                  <span>Executed withholding tax reconciliations, computerized ledger checks, and corporate tax returns.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-emerald-400 text-[10px] mt-1"></i>
+                  <span>Supported senior tax managers during client audit preparations and statutory record evaluations.</span>
+                </li>
+              </ul>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-emerald-300 rounded font-mono">FBR IRIS Portal</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-emerald-300 rounded font-mono">Corporate Tax Filing</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-emerald-300 rounded font-mono">Audit Preparation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Computer Operator | Bright Future School & College -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 items-center">
+            <!-- Timeline Node Center Indicator -->
+            <div class="timeline-node top-3"></div>
+
+            <!-- Left / Card Details (zigzag) -->
+            <div class="glass-panel p-6 mb-4 md:mb-0 order-2 md:order-1 border-l-2 md:border-r border-slate-700/80 space-y-3">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Handled core administrative computing infrastructure and academic records:
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2 list-none">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-blue-400 text-[10px] mt-1"></i>
+                  <span>Managed student enrollment databases, examination grade tabulation, and result generation systems.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-blue-400 text-[10px] mt-1"></i>
+                  <span>Processed fee management vouchers, accounts records, and computerized institutional billing.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-chevron-right text-blue-400 text-[10px] mt-1"></i>
+                  <span>Authored and formatted institutional correspondence, academic syllabi, and administrative notices.</span>
+                </li>
+              </ul>
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-blue-300 rounded font-mono">Academic Records</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-blue-300 rounded font-mono">Database Operations</span>
+                <span class="px-2 py-0.5 text-[11px] bg-slate-800/80 text-blue-300 rounded font-mono">Billing Automation</span>
+              </div>
+            </div>
+
+            <!-- Right / Content -->
+            <div class="md:text-left space-y-2 order-1 md:order-2">
+              <span class="inline-block px-3 py-1 text-xs font-mono rounded-full bg-blue-950/80 text-blue-300 border border-blue-800/60 font-semibold">
+                2021 — 2022
+              </span>
+              <h3 class="text-2xl font-bold text-white">Computer Operator</h3>
+              <p class="text-blue-400 font-medium text-sm">
+                Bright Future School & College
+              </p>
+              <p class="text-xs font-mono text-slate-400">Institutional Database & Office Systems</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. CERTIFICATIONS & DIPLOMAS
+         =================================================================== -->
+    <section id="certifications" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-xs font-mono text-cyan-300">
+            <i class="fas fa-award"></i> Verified Credentials
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Certifications & <span class="text-gradient-cyan">Diplomas</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Formal technical certifications issued by global institutions, universities, and government vocational authorities.
+          </p>
+        </div>
+
+        <!-- Filter tabs for Certifications -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
+          <button class="filter-tab active" data-cert-filter="all">All Credentials (6)</button>
+          <button class="filter-tab" data-cert-filter="ai-data">AI & Data Analytics</button>
+          <button class="filter-tab" data-cert-filter="tech-dev">Software & Mobile</button>
+          <button class="filter-tab" data-cert-filter="mgmt-tax">Business & Accounting</button>
+        </div>
+
+        <!-- Certifications Grid with Badge Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- 1. Basics of Microsoft Power BI - Level 7 (96%) -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-purple-500 relative flex flex-col justify-between cursor-pointer hover:border-purple-400 group transition-all" data-cert-category="ai-data" data-cert-key="power-bi" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-chart-column"></i>
+                </div>
+                <div class="badge-pill bg-purple-900/40 text-purple-300 border border-purple-500/40 font-mono text-xs">
+                  Score: 96%
+                </div>
+              </div>
+              
+              <div>
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block">UniAthena &bull; Sept 2026</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-purple-300 transition-colors">Basics of Microsoft Power BI - Level 7</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Advanced data modeling, Power Query transformations, DAX formulations, and interactive business intelligence dashboard synthesis.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-emerald-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-circle-check"></i> Distinction (96%)
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- 2. Master ChatGPT - Level 5 (90%) -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-cyan-500 relative flex flex-col justify-between cursor-pointer hover:border-cyan-400 group transition-all" data-cert-category="ai-data" data-cert-key="chatgpt" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="badge-pill bg-cyan-900/40 text-cyan-300 border border-cyan-500/40 font-mono text-xs">
+                  Score: 90%
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block">UniAthena &bull; Oct 2026</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-cyan-300 transition-colors">Master ChatGPT - Level 5</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Advanced prompt engineering, zero/few-shot chaining, contextual persona frameworks, automated reasoning pipelines, and AI productivity tools.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-emerald-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-circle-check"></i> Distinction (90%)
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- 3. Google AI Professional Certificate -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-blue-500 relative flex flex-col justify-between cursor-pointer hover:border-blue-400 group transition-all" data-cert-category="ai-data tech-dev" data-cert-key="google-ai" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fab fa-google"></i>
+                </div>
+                <div class="badge-pill bg-blue-900/40 text-blue-300 border border-blue-500/40 font-mono text-xs">
+                  Professional
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block">Google / Coursera &bull; Aug 2026</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-blue-300 transition-colors">Google AI Professional Certificate</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Applied artificial intelligence frameworks, generative AI models, machine learning lifecycle, responsible AI governance, and automated agent workflows.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-blue-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-certificate"></i> Official Google Track
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- 4. Mobile Application Developer -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-emerald-500 relative flex flex-col justify-between cursor-pointer hover:border-emerald-400 group transition-all" data-cert-category="tech-dev" data-cert-key="mobile-dev" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-mobile-screen-button"></i>
+                </div>
+                <div class="badge-pill bg-emerald-900/40 text-emerald-300 border border-emerald-500/40 font-mono text-xs">
+                  Government & MUET
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block">MUET Jamshoro & Govt. of Sindh &bull; Nov 2025</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-emerald-300 transition-colors">Mobile Application Developer</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Mobile UI/UX architecture, cross-platform application lifecycle, API integrations, and mobile component testing with Mehran UET faculty.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-emerald-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-university"></i> MUET Certified
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- 5. Diploma in Computer & Business Management -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-amber-500 relative flex flex-col justify-between cursor-pointer hover:border-amber-400 group transition-all" data-cert-category="mgmt-tax" data-cert-key="cb-mgmt" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="badge-pill bg-amber-900/40 text-amber-300 border border-amber-500/40 font-mono text-xs">
+                  Grade A
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono text-amber-400 uppercase tracking-wider block">STEVTA &bull; Dec 2021</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-amber-300 transition-colors">Diploma in Computer & Business Management</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Comprehensive diploma covering enterprise office management, business computing systems, software operations, database administration, and IT communications.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-amber-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-star"></i> Grade A Distinction
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- 6. Computerized Accounting Certificate -->
+          <div class="cert-card glass-panel p-6 border-t-2 border-t-purple-500 relative flex flex-col justify-between cursor-pointer hover:border-purple-400 group transition-all" data-cert-category="mgmt-tax" data-cert-key="comp-acc" title="Click to view full credential verification">
+            <div class="space-y-4">
+              <div class="flex items-start justify-between">
+                <div class="w-11 h-11 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition-transform">
+                  <i class="fas fa-receipt"></i>
+                </div>
+                <div class="badge-pill bg-purple-900/40 text-purple-300 border border-purple-500/40 font-mono text-xs">
+                  Certified
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block">BBSHRRDB / STEVTA &bull; June 2022</span>
+                <h3 class="text-lg font-bold text-white mt-1 group-hover:text-purple-300 transition-colors">Computerized Accounting Certificate</h3>
+              </div>
+
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Peachtree Accounting software, automated balance sheets, income statements, voucher ledgering, computerized payroll, and statutory reconciliation.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex items-center justify-between text-xs">
+              <span class="text-purple-400 flex items-center gap-1 font-mono">
+                <i class="fas fa-calculator"></i> Accounting Systems
+              </span>
+              <span class="text-cyan-400 group-hover:underline font-mono flex items-center gap-1">
+                Verify <i class="fas fa-arrow-right text-[10px]"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         6. EDUCATION & LANGUAGES
+         =================================================================== -->
+    <section id="education" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0f1c]/70 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Education Column -->
+          <div class="lg:col-span-7 space-y-8">
+            <div class="space-y-2">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-xs font-mono text-cyan-300">
+                <i class="fas fa-school"></i> Academic Background
+              </div>
+              <h2 class="text-3xl font-extrabold text-white">Higher Education</h2>
+              <p class="text-slate-400 text-sm">
+                Solid academic foundation in business administration, finance, and commerce.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              
+              <!-- Degree 1: BBA at IBA Jamshoro -->
+              <div class="glass-panel p-6 border-l-4 border-l-cyan-500 space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="badge-pill badge-cyan text-xs font-mono">2023 — Present</span>
+                  <span class="text-xs font-mono text-cyan-400 flex items-center gap-1">
+                    <i class="fas fa-spinner fa-spin text-[10px]"></i> In Progress
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white">Bachelor of Business Administration (BBA)</h3>
+                <p class="text-cyan-400 font-medium text-sm">
+                  Institute of Business Administration (IBA), University of Sindh, Jamshoro
+                </p>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Focusing on Corporate Strategy, Management Information Systems (MIS), Marketing Management, Organizational Behavior, and Financial Modeling.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">Business Strategy</span>
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">MIS</span>
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">Corporate Finance</span>
+                </div>
+              </div>
+
+              <!-- Degree 2: B.Com at AIOU -->
+              <div class="glass-panel p-6 border-l-4 border-l-purple-500 space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="badge-pill badge-purple text-xs font-mono">2022 — 2024</span>
+                  <span class="text-xs font-mono text-emerald-400 flex items-center gap-1">
+                    <i class="fas fa-check-circle"></i> Completed
+                  </span>
+                </div>
+                <h3 class="text-xl font-bold text-white">Associate Degree in Commerce (B.Com)</h3>
+                <p class="text-purple-400 font-medium text-sm">
+                  Allama Iqbal Open University (AIOU), Islamabad
+                </p>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Rigorous curriculum covering Financial Accounting, Mercantile & Commercial Law, Business Taxation, Auditing Procedures, and Economics.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-1.5">
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">Financial Accounting</span>
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">Taxation Law</span>
+                  <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-slate-300 rounded font-mono">Auditing</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Languages & Communication Column -->
+          <div class="lg:col-span-5 space-y-8">
+            <div class="space-y-2">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 text-xs font-mono text-purple-300">
+                <i class="fas fa-language"></i> Linguistic Range
+              </div>
+              <h2 class="text-3xl font-extrabold text-white">Languages</h2>
+              <p class="text-slate-400 text-sm">
+                Multilingual communication capacity across national, regional, and corporate spheres.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 space-y-5">
+              
+              <!-- English -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-globe text-cyan-400"></i> English
+                  </span>
+                  <span class="text-xs font-mono text-cyan-400">Professional Working</span>
+                </div>
+                <p class="text-xs text-slate-400">Technical reports, executive correspondence, documentation, and academic presentation.</p>
+                <div class="skill-bar-bg mt-1">
+                  <div class="skill-bar-fill bg-cyan-400" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <!-- Urdu -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-comment-dots text-purple-400"></i> Urdu
+                  </span>
+                  <span class="text-xs font-mono text-purple-400">Native / Bilingual</span>
+                </div>
+                <p class="text-xs text-slate-400">Fluent spoken and written, media drafting, public speech, and institutional address.</p>
+                <div class="skill-bar-bg mt-1">
+                  <div class="skill-bar-fill bg-purple-400" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Sindhi -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-comments text-emerald-400"></i> Sindhi
+                  </span>
+                  <span class="text-xs font-mono text-emerald-400">Native / Bilingual</span>
+                </div>
+                <p class="text-xs text-slate-400">Mother tongue, regional institutional liaison, and local community engagement.</p>
+                <div class="skill-bar-bg mt-1">
+                  <div class="skill-bar-fill bg-emerald-400" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Balochi -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-users text-amber-400"></i> Balochi
+                  </span>
+                  <span class="text-xs font-mono text-amber-400">Fluent Spoken</span>
+                </div>
+                <p class="text-xs text-slate-400">Cultural fluency, conversational communication, and outreach.</p>
+                <div class="skill-bar-bg mt-1">
+                  <div class="skill-bar-fill bg-amber-400" style="width: 85%;"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Reference Callout Card -->
+            <div class="glass-panel p-6 border-l-4 border-l-cyan-400 space-y-2">
+              <div class="flex items-center gap-2 text-xs font-mono text-cyan-400">
+                <i class="fas fa-user-check"></i> Professional Reference
+              </div>
+              <h4 class="text-base font-bold text-white">Sir Munawar Ali Bhurgri</h4>
+              <p class="text-xs text-slate-300 font-medium">Web & Software Developer</p>
+              <p class="text-[11px] text-slate-400 italic">
+                Senior mentor and technology specialist providing professional verification and technical endorsement.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FEATURED PROJECTS & CASE STUDIES (Bonus Showcase)
+         =================================================================== -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-xs font-mono text-cyan-300">
+            <i class="fas fa-layer-group"></i> Practical Work
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Featured <span class="text-gradient-cyan">Work & Projects</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Representative case studies demonstrating applied data intelligence, institutional media systems, and web architecture.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+          <!-- Project 1: Power BI Executive Dashboard -->
+          <div class="glass-panel p-6 flex flex-col justify-between group hover:border-cyan-400 transition-all">
+            <div class="space-y-4">
+              <div class="h-44 rounded-xl bg-gradient-to-br from-purple-950/80 via-slate-900 to-cyan-950/60 border border-slate-700/60 flex flex-col justify-between p-4 relative overflow-hidden">
+                <div class="flex justify-between items-center text-xs font-mono text-cyan-300">
+                  <span>POWER BI &bull; BI-01</span>
+                  <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Level 7 Model</span>
+                </div>
+                <!-- Simulated Chart Graphic -->
+                <div class="flex items-end justify-between gap-1.5 h-20 pt-4 px-2">
+                  <div class="w-full bg-purple-500/40 rounded-t h-[40%] group-hover:h-[60%] transition-all"></div>
+                  <div class="w-full bg-cyan-500/50 rounded-t h-[65%] group-hover:h-[85%] transition-all"></div>
+                  <div class="w-full bg-purple-500/60 rounded-t h-[50%] group-hover:h-[70%] transition-all"></div>
+                  <div class="w-full bg-cyan-500/70 rounded-t h-[80%] group-hover:h-[95%] transition-all"></div>
+                  <div class="w-full bg-purple-500/80 rounded-t h-[70%] group-hover:h-[80%] transition-all"></div>
+                  <div class="w-full bg-cyan-400 rounded-t h-[96%] group-hover:h-[100%] transition-all shadow-lg shadow-cyan-400/40"></div>
+                </div>
+                <div class="text-[11px] font-mono text-slate-400 flex justify-between">
+                  <span>KPI Revenue & Trend Modeling</span>
+                  <span class="text-emerald-400">+24.8%</span>
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                Executive Sales & KPI Analytics Dashboard
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Automated multi-source data ingestion, dimensional star-schema modeling, and interactive DAX measures delivering executive business metrics.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-purple-300 rounded font-mono">Power BI</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-cyan-300 rounded font-mono">Power Query</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-cyan-300 rounded font-mono">DAX</span>
+            </div>
+          </div>
+
+          <!-- Project 2: IBA Jamshoro Media & PR Hub -->
+          <div class="glass-panel p-6 flex flex-col justify-between group hover:border-purple-400 transition-all">
+            <div class="space-y-4">
+              <div class="h-44 rounded-xl bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950/80 border border-slate-700/60 flex flex-col justify-between p-4 relative overflow-hidden">
+                <div class="flex justify-between items-center text-xs font-mono text-purple-300">
+                  <span>COMMUNICATION &bull; PR-HUB</span>
+                  <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">IBAJ-SS</span>
+                </div>
+                
+                <!-- Central Emblem / Icon Graphic -->
+                <div class="flex items-center justify-center py-2">
+                  <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-300 text-2xl shadow-xl shadow-purple-900/50 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-bullhorn"></i>
+                  </div>
+                </div>
+
+                <div class="text-[11px] font-mono text-slate-400 flex justify-between">
+                  <span>Official Media Dissemination</span>
+                  <span class="text-cyan-400">100% Reach</span>
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+                IBA Jamshoro Institutional Media Portal
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Centralized communication framework directing official society press releases, symposium graphics, digital coverage, and leadership correspondence.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-purple-300 rounded font-mono">Public Relations</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-purple-300 rounded font-mono">Digital Media</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-cyan-300 rounded font-mono">Brand Assets</span>
+            </div>
+          </div>
+
+          <!-- Project 3: FBR Corporate E-Filing System -->
+          <div class="glass-panel p-6 flex flex-col justify-between group hover:border-emerald-400 transition-all">
+            <div class="space-y-4">
+              <div class="h-44 rounded-xl bg-gradient-to-br from-slate-900 via-teal-950/70 to-emerald-950/80 border border-slate-700/60 flex flex-col justify-between p-4 relative overflow-hidden">
+                <div class="flex justify-between items-center text-xs font-mono text-emerald-300">
+                  <span>TAXATION &bull; COMPLIANCE</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">FBR IRIS</span>
+                </div>
+                
+                <!-- Central Emblem / Icon Graphic -->
+                <div class="flex items-center justify-center py-2">
+                  <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-300 text-2xl shadow-xl shadow-emerald-900/50 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-file-shield"></i>
+                  </div>
+                </div>
+
+                <div class="text-[11px] font-mono text-slate-400 flex justify-between">
+                  <span>Withholding & Audit Framework</span>
+                  <span class="text-emerald-400">Zero Error</span>
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                Corporate Tax & Withholding Compliance Suite
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Streamlined client tax dossier management, electronic ledger reconciliation, and computerized FBR portal submission protocols.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 mt-5 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-emerald-300 rounded font-mono">FBR Portal</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-emerald-300 rounded font-mono">Tax Filing</span>
+              <span class="px-2 py-0.5 text-[11px] bg-slate-800 text-emerald-300 rounded font-mono">Peachtree</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         7. FOOTER & QUICK CONTACT FORM
+         =================================================================== -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#070b13] relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-xs font-mono text-cyan-300">
+            <i class="fas fa-comments"></i> Get In Touch
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Initiate a <span class="text-gradient-cyan">Conversation</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Reach out for consulting inquiries, business intelligence projects, IT training workshops, or corporate taxation compliance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Details & Info Cards -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="glass-panel p-6 space-y-6">
+              <h3 class="text-xl font-bold text-white">Direct Coordinates</h3>
+              
+              <!-- Location -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg flex-shrink-0">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-slate-400 uppercase">Location</div>
+                  <div class="text-slate-200 font-semibold text-sm">Matli, Sindh, Pakistan</div>
+                  <div class="text-xs text-slate-500">Available for remote & on-site engagements</div>
+                </div>
+              </div>
+
+              <!-- Email with Quick Copy -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg flex-shrink-0">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="flex-grow">
+                  <div class="text-xs font-mono text-slate-400 uppercase">Official Email</div>
+                  <div class="flex items-center justify-between">
+                    <a href="mailto:sardarbrohi000@gmail.com" class="text-slate-200 hover:text-cyan-400 font-semibold text-sm break-all transition-colors">
+                      sardarbrohi000@gmail.com
+                    </a>
+                    <button data-copy-text="sardarbrohi000@gmail.com" data-copy-label="Email" class="ml-2 text-slate-400 hover:text-cyan-400 text-xs p-1" title="Copy Email">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="text-xs text-slate-500">Direct response within 24 hours</div>
+                </div>
+              </div>
+
+              <!-- Phone & WhatsApp -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg flex-shrink-0">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="flex-grow">
+                  <div class="text-xs font-mono text-slate-400 uppercase">Phone & WhatsApp</div>
+                  <div class="flex items-center justify-between">
+                    <a href="https://wa.me/923053886931" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-emerald-400 font-semibold text-sm transition-colors">
+                      +92 305 3886931
+                    </a>
+                    <button data-copy-text="+923053886931" data-copy-label="Phone" class="ml-2 text-slate-400 hover:text-cyan-400 text-xs p-1" title="Copy Phone Number">
+                      <i class="fas fa-copy"></i>
+                    </button>
+                  </div>
+                  <div class="text-xs text-slate-500">Call / Instant Messaging</div>
+                </div>
+              </div>
+
+              <!-- Official Endorsement & Reference Mention -->
+              <div class="pt-5 border-t border-slate-800 space-y-2">
+                <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <i class="fas fa-shield-check"></i> Verified Reference
+                </div>
+                <div class="text-sm font-bold text-white">Sir Munawar Ali Bhurgri</div>
+                <div class="text-xs text-cyan-300">Web & Software Developer</div>
+                <p class="text-xs text-slate-400">
+                  Senior Developer reference available for formal academic and technical verification.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Functional Quick Contact Form -->
+          <div class="lg:col-span-7">
+            <div class="glass-panel p-8 border border-slate-700/80">
+              <h3 class="text-2xl font-bold text-white mb-2">Send an Instant Message</h3>
+              <p class="text-xs text-slate-400 mb-6">
+                Fill in the details below. This will prepare a direct encrypted message and notify Sardar Hussain immediately.
+              </p>
+
+              <form id="contact-form" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  
+                  <!-- Name Field -->
+                  <div class="space-y-1.5">
+                    <label for="sender-name" class="block text-xs font-mono text-slate-300">
+                      Your Name <span class="text-cyan-400">*</span>
+                    </label>
+                    <div class="relative">
+                      <input 
+                        type="text" 
+                        id="sender-name" 
+                        required 
+                        placeholder="e.g. John Doe" 
+                        class="w-full px-4 py-3 bg-[#0a0f1d] border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-sans">
+                    </div>
+                  </div>
+
+                  <!-- Email Field -->
+                  <div class="space-y-1.5">
+                    <label for="sender-email" class="block text-xs font-mono text-slate-300">
+                      Your Email <span class="text-cyan-400">*</span>
+                    </label>
+                    <div class="relative">
+                      <input 
+                        type="email" 
+                        id="sender-email" 
+                        required 
+                        placeholder="e.g. john@example.com" 
+                        class="w-full px-4 py-3 bg-[#0a0f1d] border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-sans">
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Subject Field -->
+                <div class="space-y-1.5">
+                  <label for="sender-subject" class="block text-xs font-mono text-slate-300">
+                    Project / Inquiry Scope
+                  </label>
+                  <select 
+                    id="sender-subject" 
+                    class="w-full px-4 py-3 bg-[#0a0f1d] border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-sans">
+                    <option value="Data Analytics & Power BI Dashboard">Data Analytics & Power BI Dashboard</option>
+                    <option value="Web & E-Commerce Development">Web & E-Commerce Development (Shopify/Wix/Custom)</option>
+                    <option value="AI Automation & Prompt Engineering">AI Automation & Prompt Engineering</option>
+                    <option value="Corporate Taxation & FBR E-Filing">Corporate Taxation & FBR E-Filing</option>
+                    <option value="Institutional Speaking & IT Training">Institutional Speaking & IT Training</option>
+                    <option value="Other Business Inquiry">Other Business Inquiry</option>
+                  </select>
+                </div>
+
+                <!-- Message Field -->
+                <div class="space-y-1.5">
+                  <label for="sender-message" class="block text-xs font-mono text-slate-300">
+                    Message Description <span class="text-cyan-400">*</span>
+                  </label>
+                  <textarea 
+                    id="sender-message" 
+                    rows="4" 
+                    required 
+                    placeholder="Briefly describe your requirements or inquiry..." 
+                    class="w-full px-4 py-3 bg-[#0a0f1d] border border-slate-700 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all font-sans resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                  <button type="submit" id="contact-submit-btn" class="btn-primary w-full py-3.5 text-sm font-semibold tracking-wide">
+                    <i class="fas fa-paper-plane mr-2"></i> Transmit Message
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono pt-1">
+                  <span><i class="fas fa-lock text-cyan-400 mr-1"></i> Client inquiries are confidential</span>
+                  <span>Direct link: sardarbrohi000@gmail.com</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div>
+            &copy; 2026 <strong class="text-slate-300">Sardar Hussain</strong>. All rights reserved. Technology & Data Professional.
+          </div>
+          <div class="flex items-center gap-6">
+            <a href="#hero" class="hover:text-cyan-400 transition-colors">Back to Top <i class="fas fa-arrow-up ml-1"></i></a>
+            <a href="mailto:sardarbrohi000@gmail.com" class="hover:text-cyan-400 transition-colors">Email</a>
+            <a href="https://wa.me/923053886931" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       CREDENTIAL VERIFICATION MODAL
+       =================================================================== -->
+  <div id="credential-modal" class="modal-backdrop">
+    <div class="modal-content-box p-6 sm:p-8 space-y-6 relative">
+      <button id="modal-close-btn" class="absolute top-5 right-5 text-slate-400 hover:text-cyan-400 text-xl transition-colors cursor-pointer" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modal-body">
+        <!-- Content injected dynamically via main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       TOAST NOTIFICATION COMPONENT
+       =================================================================== -->
+  <div id="toast-notification" class="glass-panel p-4 max-w-sm border border-cyan-500/40 shadow-2xl flex items-center gap-3">
+    <div id="toast-icon" class="fas fa-check-circle text-cyan-400 text-xl"></div>
+    <div>
+      <div id="toast-title" class="text-sm font-bold text-white">Notification</div>
+      <div id="toast-desc" class="text-xs text-slate-300">Action performed successfully.</div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="js/main.js"></script>
+</body>
+</html>
